@@ -17,7 +17,7 @@ export default function Home() {
 
     ws.onmessage = (event) => {
       const updates: DataItem[] = JSON.parse(event.data);
-      // reformat updates data into map
+      // reformat updates data array into map
       updates.forEach((u) => {
         bufferRef.current[u.id] = u;
       });
